@@ -4,6 +4,7 @@ using UnityEngine;
 public sealed class PlayerController : MonoBehaviour
 {
 	public Rigidbody2D playerRigidbody;
+	public Pontuacao pontuacao;
 
 	public float moveAcceleration = 1.0f;
 	public float maxHorizontalVelocity = 10.0f;
@@ -14,6 +15,9 @@ public sealed class PlayerController : MonoBehaviour
 
 	public float stunTime = 1.0f;
 	public float stunImpulse = 10.0f;
+
+	public float enemyJumpImpulse = 10.0f;
+	public int pontosInimigo = 10;
 
 	[System.NonSerialized]
 	public bool isGrounded;
@@ -69,8 +73,18 @@ public sealed class PlayerController : MonoBehaviour
 		{
 			if( !isStunned )
 			{
-				playerRigidbody.AddForce( collision.contacts[0].normal * stunImpulse, ForceMode2D.Impulse );
-				StartCoroutine( StunCoroutine() );
+				Vector3 deltaPosition = transform.position - collision.transform.position;
+
+				if( deltaPosition.y > 0 /*&& Mathf.Abs(deltaPosition.y) > Mathf.Abs(deltaPosition.x)*/ )
+				{
+					pontuacao.GanhaESalvaPontos( pontosInimigo );
+					playerRigidbody.AddForce( Vector3.up * stunImpulse, ForceMode2D.Impulse );
+				}
+				else
+				{
+					//playerRigidbody.AddForce( collision.contacts[0].normal * stunImpulse, ForceMode2D.Impulse );
+					//StartCoroutine( StunCoroutine() );
+				}
 			}
 		}
 	}
