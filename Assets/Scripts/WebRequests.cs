@@ -17,6 +17,7 @@ public class WebRequests : MonoBehaviour
     private IEnumerator PegaPontuacaoCoroutine(System.Action<int> callback)
     {
         // Uma requisição qualquer pra simular um backend
+        yield return new WaitForSeconds(1.0f);
         var www = new WWW("https://wt-be8f90d3f57b6fb8a068de1fd1847f86-0.run.webtask.io/full-http-control");
         yield return www;
 
@@ -29,8 +30,9 @@ public class WebRequests : MonoBehaviour
 
     private IEnumerator SalvaPontuacaoCoroutine( int pontos, System.Action<int> callback )
 	{
-		// Uma requisição qualquer pra simular um backend
-		var www = new WWW("https://wt-be8f90d3f57b6fb8a068de1fd1847f86-0.run.webtask.io/full-http-control?pontos=" + pontos);
+        yield return new WaitForSeconds(1.0f);
+        // Uma requisição qualquer pra simular um backend
+        var www = new WWW("https://wt-be8f90d3f57b6fb8a068de1fd1847f86-0.run.webtask.io/full-http-control?pontos=" + pontos);
 		yield return www;
 
         if (int.TryParse(www.text, out pontos))
