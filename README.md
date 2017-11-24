@@ -6,7 +6,7 @@ Achar e consertar o bug :B
 
 ## Descrição
 
-Tem um plauer e um inimigo. Quando o player pula em cima do inimigo, ganha 10 pontos e
+Tem um player e um inimigo. Quando o player pula em cima do inimigo, ganha 10 pontos e
 manda o score novo pro servidor. O servidor, por sua vez, responde com a pontuação final.
 
 Se muitas requisições forem mandadas de uma vez, são geradas inconsistências e a score
