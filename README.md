@@ -1,37 +1,25 @@
-## Welcome to GitHub Pages
+# lessa.codes/tpj2-b4-av3
 
-You can use the [editor on GitHub](https://github.com/matheuslessarodrigues/tpj2-b4-av3/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+### ENVIAR [AQUI](https://goo.gl/forms/N9JqE528ev4WlNSJ2)
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+Achar e consertar o bug :B
 
-### Markdown
+## Descrição
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+Tem um plauer e um inimigo. Quando o player pula em cima do inimigo, ganha 10 pontos e
+manda o score novo pro servidor. O servidor, por sua vez, responde com a pontuação final.
 
-```markdown
-Syntax highlighted code block
+Se muitas requisições forem mandadas de uma vez, são geradas inconsistências e a score
+fica menor que o correto.
 
-# Header 1
-## Header 2
-### Header 3
+O trabalho é identificar a razão dessa inconsistência e consertá-la.
 
-- Bulleted
-- List
+## **SE LIGA**
 
-1. Numbered
-2. List
+- Identificar corretamente a causa do problema é metade da nota
+- O contador de pulo não é só local. Então serve pra ter noção de qual deveria ser a pontuação correta
 
-**Bold** and _Italic_ and `Code` text
+## Logística
 
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/matheuslessarodrigues/tpj2-b4-av3/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+- Grupos de 2 a 4 humaninhos
+- Envia o trabalho por [aqui](https://goo.gl/forms/N9JqE528ev4WlNSJ2)
