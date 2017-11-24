@@ -7,6 +7,16 @@ public class Pontuacao : MonoBehaviour
 	public int pontos = 0;
 	public int pulos = 0;
 
+    private void Start()
+    {
+        PegaPontos();
+    }
+
+    public void PegaPontos()
+    {
+        webRequests.PegaPontuacao(RetornoPontuacao);
+    }
+
 	public void GanhaESalvaPontos( int p )
 	{
 		pulos += 1;
